@@ -222,11 +222,11 @@ int GetContentLengthFromHeaders(string response, ref bool headersRead)
             {
                 if(int.TryParse(line["Content-Length: ".Length..], out result))
                 {
-                    Console.WriteLine($"\"Content-Length\" was read correctly");
+                    Console.WriteLine($"\"Content-Length\" был прочитан корректно");
                 }
                 else
                 {
-                    throw new Exception($"\"Content-Length\" wasn't read correctly");
+                    throw new Exception($"\"Content-Length\" был прочитан некорректно");
                 }
                 headersRead = true;
                 break;
